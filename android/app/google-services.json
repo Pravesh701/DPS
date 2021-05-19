@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1092574991271",
+    "firebase_url": "https://onboardingdemo-12c52.firebaseio.com",
+    "project_id": "onboardingdemo-12c52",
+    "storage_bucket": "onboardingdemo-12c52.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1092574991271:android:163bb90bc6367c7b6b1c82",
+        "android_client_info": {
+          "package_name": "com.onboardingdemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1092574991271-646nk6hngd0nbqnbf5ljmtp82p5b1hk9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDv9ZZJfDSBzuxsev1c9__Z6lL9yz8N8es"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1092574991271-646nk6hngd0nbqnbf5ljmtp82p5b1hk9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
