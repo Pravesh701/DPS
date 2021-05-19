@@ -48,6 +48,7 @@ const MembersList = (props: Props) => {
                 keyExtractor={(item: any, index: any) => index.toString()}
                 showsHorizontalScrollIndicator={false}
                 showsVerticalScrollIndicator={false}
+                contentContainerStyle = {styles.contentContainerStyle}
             />
         </View>
     )
@@ -58,7 +59,7 @@ export default MembersList;
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingHorizontal: vw(16)
+        paddingHorizontal: vw(10)
     },
     listContainer: {
         flexDirection: 'row',
@@ -86,5 +87,8 @@ const styles = StyleSheet.create({
         fontFamily: fontFamily.muliRegular,
         color: 'gray',
         marginTop: vh(6)
+    },
+    contentContainerStyle:{
+        paddingTop: vh(10)
     }
 })

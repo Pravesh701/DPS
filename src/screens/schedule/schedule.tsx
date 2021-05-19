@@ -1,11 +1,12 @@
 import React from 'react';
-import { View, StyleSheet, Text, FlatList, Image } from 'react-native';
+import { View, StyleSheet, Text, FlatList, Image, TouchableOpacity } from 'react-native';
 
 //Custom Imports
 import color from '../../utils/color';
 import images from '../../utils/images';
 import fontFamily from '../../utils/fonts';
 import { normalize, vh, vw } from '../../utils/dimensions';
+import Strings from '../../utils/strings';
 
 interface Props {
     route: any;
@@ -13,29 +14,32 @@ interface Props {
 }
 
 const memberList = [
-    {name: 'Sarthak Mangla', position: 'Lead'},
-    {name: 'Shshwat Mudra', position: 'Student'},
-    {name: 'Ramesh Mangla', position: 'Student'},
-    {name: 'Kratika Singh', position: 'Student'},
-    {name: 'Aditya Gupta', position: 'Teacher'},
-    {name: 'Rohit Mangla', position: 'Student'},
-    {name: 'Rakul Singh', position: 'Student'},
-    {name: 'Preet Singh', position: 'Teacher'},
-    {name: 'Mohan Singh', position: 'Student'},
-    {name: 'Gauri Singh', position: 'Teacher'},
-    {name: 'Akriti Singh', position: 'Student'},
+    { eventName: 'Trip to Dharmashala', date: '6-7 Jan', totalParticipant: 8, imageUri: images.dharmashala_icon },
+    { eventName: 'Trip to Bali', date: '12-15 May', totalParticipant: 200, imageUri: images.vacation_bali_ic },
+    { eventName: 'Trip to Manli', date: '5-7 Jun', totalParticipant: 100, imageUri: images.heaven },
+    { eventName: 'Three Ediot', date: '15 August', totalParticipant: 20, imageUri: images.movie_ticket },
 ]
 
 const ScheduleScreen = (props: Props) => {
     const renderListContainer = ({ index, item }: any) => {
         return (
-           <View style = {styles.listContainer}>
-               <Image style = {styles.profileImage} source = {images.inactiveProfile} />
-               <View style = {styles.nameContainer}>
-                   <Text style = {styles.nameStyle}>{item.name}</Text>
-                   <Text style = {styles.positionStyle}>{item.position}</Text>
-               </View>
-           </View>
+            <TouchableOpacity activeOpacity = {0.5} style={styles.listContainer}>
+                <Image resizeMode={'contain'} style={styles.profileImage} source={item.imageUri} />
+                <View style={styles.nameContainer}>
+                    <Text numberOfLines = {1} style={styles.nameStyle}>{item.eventName}</Text>
+                    <View style={styles.dateMainContainer}>
+                        <View style={styles.timerContainer}>
+                            <Image resizeMode={'contain'} style={styles.timerImage} source={images.timer_icon} />
+                            <Text style={styles.positionStyle}>{item.date}</Text>
+                        </View>
+                        <View style={[styles.timerContainer, {marginStart: vw(12)}]}>
+                            <Image resizeMode={'contain'} style={styles.timerImage} source={images.placeholder_timer_icon} />
+                            <Text style={styles.positionStyle}>{item.totalParticipant} {Strings.people}</Text>
+                        </View>
+                    </View>
+                </View>
+                <Image resizeMode = {'contain'} style = {styles.rightArrow} source = {images.arrow_right_gray_icon} />
+            </TouchableOpacity>
         )
     }
 
@@ -47,6 +51,7 @@ const ScheduleScreen = (props: Props) => {
                 keyExtractor={(item: any, index: any) => index.toString()}
                 showsHorizontalScrollIndicator={false}
                 showsVerticalScrollIndicator={false}
+                contentContainerStyle = {styles.contentContainerStyle}
             />
         </View>
     )
@@ -57,7 +62,7 @@ export default ScheduleScreen;
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingHorizontal: vw(16)
+        paddingHorizontal: vw(10)
     },
     listContainer: {
         flexDirection: 'row',
@@ -68,22 +73,44 @@ const styles = StyleSheet.create({
         paddingVertical: vh(12),
         borderRadius: vw(8)
     },
-    profileImage:{
+    profileImage: {
         width: vw(50),
         height: vw(50)
     },
-    nameContainer:{
+    nameContainer: {
         marginStart: vw(10)
     },
-    nameStyle:{
+    nameStyle: {
         fontSize: normalize(16),
         fontFamily: fontFamily.muliSemiBold,
         color: color.black,
     },
-    positionStyle:{
+    positionStyle: {
         fontSize: normalize(16),
         fontFamily: fontFamily.muliRegular,
         color: 'gray',
+        marginStart: vw(10)
+    },
+    dateMainContainer: {
+        flexDirection: 'row',
         marginTop: vh(6)
+    },
+    timerContainer: {
+        flexDirection: 'row',
+        alignItems: 'center'
+    },
+    timerImage: {
+        width: vw(15),
+        height: vw(15)
+    },
+    rightArrow:{
+        width: vw(10),
+        height: vw(20),
+        position: 'absolute',
+        zIndex: 1,
+        end: vw(16)
+    },
+    contentContainerStyle:{
+        paddingTop: vh(10)
     }
 })

@@ -14,10 +14,14 @@ interface Props {
 }
 
 const newsFeed = [
-    { title: 'Our Pradhan Mantri Rashtriya Bal Puraskar 2020 Awardees', image_uri: images.list1 },
-    { title: 'National Youth Icon Award 2020', image_uri: images.list3 },
-    { title: 'Delhi Public School R K Puram Secures Top Rank', image_uri: images.list4 },
-    { title: 'Asia Pacific Linguistics Olympiad', image_uri: images.list2 },
+    { title: 'National Inter DPS Swimming Open Girls Championship 2019', image_uri: images.list5 },
+    { title: 'Junior National Taekwondo Championship 2019', image_uri: images.list6 },
+    { title: 'Toronto Open Taekwondo Championships', image_uri: images.list7 },
+    { title: 'CBSE Table Tennis Championship 2019', image_uri: images.list8 },
+    { title: 'National Inter DPS Swimming Open Girls Championship 2019', image_uri: images.list5 },
+    { title: 'Junior National Taekwondo Championship 2019', image_uri: images.list6 },
+    { title: 'Toronto Open Taekwondo Championships', image_uri: images.list7 },
+    { title: 'CBSE Table Tennis Championship 2019', image_uri: images.list8 },
 ]
 
 const WinsScreen = (props: Props) => {
@@ -51,10 +55,11 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
-        paddingHorizontal: vw(16)
+        paddingHorizontal: vw(10)
     },
     listContainer: {
-        paddingBottom: vh(50)
+        paddingBottom: vh(50),
+        paddingTop: vh(10)
     },
     renderNewsFeedContainer: {
         justifyContent: 'center',

@@ -1,5 +1,4 @@
 import { useSelector, useDispatch } from 'react-redux';
-import LinearGradient from 'react-native-linear-gradient';
 import React, { useState, useEffect, useLayoutEffect } from 'react';
 import { View, StyleSheet, Text, Image, TouchableOpacity, Alert, BackHandler, FlatList } from 'react-native';
 
@@ -14,14 +13,16 @@ import { ReducersModal } from '../../utils/modals';
 import { vh, normalize, vw } from '../../utils/dimensions';
 import ImageBackgroundBlank from '../../components/imageBackgroundBlank';
 import FloatingAction from '../../components/floatingButton/FloatingAction';
-
-
 interface Props {
     route: any;
     navigation: any;
 }
 
 const newsFeed = [
+    { title: 'Our Pradhan Mantri Rashtriya Bal Puraskar 2020 Awardees', image_uri: images.list1 },
+    { title: 'National Youth Icon Award 2020', image_uri: images.list3 },
+    { title: 'Delhi Public School R K Puram Secures Top Rank', image_uri: images.list4 },
+    { title: 'Asia Pacific Linguistics Olympiad', image_uri: images.list2 },
     { title: 'Our Pradhan Mantri Rashtriya Bal Puraskar 2020 Awardees', image_uri: images.list1 },
     { title: 'National Youth Icon Award 2020', image_uri: images.list3 },
     { title: 'Delhi Public School R K Puram Secures Top Rank', image_uri: images.list4 },
@@ -123,44 +124,11 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
-        paddingHorizontal: vw(16)
-    },
-    profileImageStyle: {
-        marginTop: vh(100)
-    },
-    userEmail: {
-        fontFamily: fontFamily.muliSemiBold,
-        fontSize: normalize(16),
-        color: color.startGradientBtn,
-        marginTop: vh(12)
-    },
-    gradientButton: {
-        marginTop: vh(100),
-        width: '100%',
-        height: vh(48),
-        alignSelf: 'center',
-        borderColor: color.endGradientBtn,
-        overflow: 'hidden',
-        justifyContent: 'center',
-        alignItems: 'center',
-        borderRadius: vw(8),
-        borderWidth: vw(2),
-    },
-    buttonText: {
-        fontSize: normalize(16),
-        fontFamily: fontFamily.muliSemiBold,
-        textAlign: 'center',
-        color: color.white,
-        backgroundColor: 'transparent',
-    },
-    linearGradient: {
-        flex: 1,
-        width: '100%',
-        justifyContent: 'center',
-        alignItems: 'center',
+        paddingHorizontal: vw(7)
     },
     listContainer: {
-        paddingBottom: vh(50)
+        paddingBottom: vh(50),
+        paddingTop: vh(10)
     },
     renderNewsFeedContainer: {
         justifyContent: 'center',
