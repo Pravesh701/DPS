@@ -18,6 +18,18 @@ const memberList = [
     { eventName: 'Trip to Bali', date: '12-15 May', totalParticipant: 200, imageUri: images.vacation_bali_ic },
     { eventName: 'Trip to Manli', date: '5-7 Jun', totalParticipant: 100, imageUri: images.heaven },
     { eventName: 'Three Ediot', date: '15 August', totalParticipant: 20, imageUri: images.movie_ticket },
+    { eventName: 'Trip to Golden Temple', date: '3-9 Jan', totalParticipant: 8, imageUri: images.dharmashala_icon },
+    { eventName: 'Trip to Goa', date: '1-15 May', totalParticipant: 200, imageUri: images.vacation_bali_ic },
+    { eventName: 'Trip to Dubai', date: '5-10 Jun', totalParticipant: 100, imageUri: images.heaven },
+    { eventName: 'Avtar', date: '26 Sep', totalParticipant: 20, imageUri: images.movie_ticket },
+    { eventName: 'Trip to Dharmashala', date: '6-7 Jan', totalParticipant: 8, imageUri: images.dharmashala_icon },
+    { eventName: 'Trip to Bali', date: '12-15 May', totalParticipant: 200, imageUri: images.vacation_bali_ic },
+    { eventName: 'Trip to Manli', date: '5-7 Jun', totalParticipant: 100, imageUri: images.heaven },
+    { eventName: 'Three Ediot', date: '15 August', totalParticipant: 20, imageUri: images.movie_ticket },
+    { eventName: 'Trip to Golden Temple', date: '3-9 Jan', totalParticipant: 8, imageUri: images.dharmashala_icon },
+    { eventName: 'Trip to Goa', date: '1-15 May', totalParticipant: 200, imageUri: images.vacation_bali_ic },
+    { eventName: 'Trip to Dubai', date: '5-10 Jun', totalParticipant: 100, imageUri: images.heaven },
+    { eventName: 'Avtar', date: '26 Sep', totalParticipant: 20, imageUri: images.movie_ticket },
 ]
 
 const ScheduleScreen = (props: Props) => {
